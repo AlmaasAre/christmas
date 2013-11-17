@@ -1,0 +1,30 @@
+{
+  "name": "firebase",
+  "authors": [
+    "Eric Zou <hello@ericzou.com>"
+  ],
+  "description": "firebase bower package",
+  "main": "firebase.js",
+  "keywords": [
+    "firebase"
+  ],
+  "license": "MIT",
+  "homepage": "www.firebase.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "3aeaba9ad4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3aeaba9ad47fe47d283dd7f2aa116607391f1c47"
+  },
+  "_source": "git://github.com/ericzou/firebase.git",
+  "_target": "*",
+  "_originalSource": "firebase",
+  "_direct": true
+}

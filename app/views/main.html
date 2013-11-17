@@ -1,0 +1,14 @@
+<div class="header">
+	<!--<ul class="nav nav-pills pull-right">
+		<li class="active"><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>-->
+	<h1 class="text-muted"><span class="hearts">♥♥</span> Snart er det JUL! :D <span class="hearts">♥♥</span></h1>
+</div>
+
+<div class="container">
+    <div class="col-sm-3 well calendaritem" ng-repeat="item in calendar" ng-click="flipCalendar(item.day)">
+        <h1>{{item.day}}</h1>
+    </div>
+</div>
