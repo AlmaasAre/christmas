@@ -20170,20 +20170,6 @@ CARDS!
   }
 }
 
-.flipped {
-  -webkit-transition: all 2.9s;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
-  }
-
-  line {
-    font-family: \00003108;
-  }
-}
-
 .flip-container,
 .front,
 .back {
@@ -20201,7 +20187,7 @@ CARDS!
   }
 
   line {
-    font-family: \00003117;
+    font-family: \00003107;
   }
 }
 
@@ -20222,7 +20208,7 @@ CARDS!
   }
 
   line {
-    font-family: \00003125;
+    font-family: \00003115;
   }
 }
 
@@ -20244,7 +20230,7 @@ CARDS!
   }
 
   line {
-    font-family: \00003134;
+    font-family: \00003124;
   }
 }
 
@@ -20260,7 +20246,7 @@ CARDS!
   }
 
   line {
-    font-family: \00003139;
+    font-family: \00003129;
   }
 }
 
@@ -20279,7 +20265,7 @@ CARDS!
     }
 
     line {
-      font-family: \00003147;
+      font-family: \00003137;
     }
 }
 
@@ -20295,7 +20281,7 @@ CARDS!
     }
 
     line {
-      font-family: \00003154;
+      font-family: \00003144;
     }
 }
 
@@ -20314,7 +20300,7 @@ CARDS!
     }
 
     line {
-      font-family: \00003159;
+      font-family: \00003149;
     }
 }
 
@@ -20330,7 +20316,7 @@ CARDS!
     }
 
     line {
-      font-family: \00003163;
+      font-family: \00003153;
     }
 }
 

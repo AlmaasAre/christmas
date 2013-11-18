@@ -1,0 +1,18 @@
+<div ng-if="!isLoggedIn()" class="jumbotron">
+    <h2>SO U THINK U CAN DANCE?</h2>
+
+    <form>
+        <input type="text" ng-model="username" placeholder="Your horses' NAME" required/>
+        <input type="password" ng-model="password" placeholder="***PASSWORD" required/>
+        <button ng-submit="login()">DIE PLZ</button>
+    </form>
+</div>
+
+
+<div ng-if="isLoggedIn()" class="jumbotron">
+    <h2>HEI ADMIN! Du har SNEKET DEg iNN JA?</h2>
+    <div class="container">
+        <button>TA ET BILDE DAA!</button>
+    </div>
+</div>
+
