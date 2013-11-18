@@ -8,7 +8,16 @@
 </div>
 
 <div class="container">
-    <div class="col-sm-3 well calendaritem" ng-repeat="item in calendar" ng-click="flipCalendar(item.day)">
-        <h1>{{item.day}}</h1>
+    <div ng-repeat="item in calendar" >
+        <div class="col-sm-3 flip-container well calendaritem" ng-click="flipCalendar(item.day)" ng-class="{'flipped':item.flipped}">
+            <div class="flipper" >
+                <div class="front">
+                    <h1>{{item.day}}</h1>
+                </div>
+                <div class="back">
+                    This is the back
+                </div>
+            </div>
+        </div>
     </div>
 </div>

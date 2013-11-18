@@ -9,12 +9,19 @@ angular.module('christmasApp')
 
         $scope.calendar = [];
 
-        angularFire(new Firebase('https://christmas.firebaseio.com/calendar'), $scope, 'calendar');
+        angularFire(new Firebase('https://christmas.firebaseio.com/calendar'), $scope, 'calendar').then(
 
+
+        );
 
         $scope.flipCalendar = function (i) {
-            alert(i);
+
+            $scope.calendar[i-1].flipped = !$scope.calendar[i-1].flipped;
+
         };
 
+        $scope.getClass = function (i) {
+            return 'flipped';
+        }
 
   });

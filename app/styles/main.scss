@@ -16,6 +16,7 @@ body {
     padding-bottom: 20px;
     background: url(../images/digital-christmas-tree.jpg);
     background-size:cover;
+  background-repeat: no-repeat;
 }
 h1, h2, h3, h4, h5, h6{
   font-family: 'Mountains of Christmas', cursive;
@@ -75,10 +76,61 @@ h1, h2, h3, h4, h5, h6{
   width: 23% !important;
 }
 
-.calendaritem > h1{
+.calendaritem  h1{
   font-size:50px;
   text-align:center;
 }
+
+
+/***
+CARDS!
+****/
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container.flipped .flipper{
+
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 115px;
+  height: 107px;
+  transition: 2.9s;
+  -webkit-transition: all 2.9s;
+
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 500px) {

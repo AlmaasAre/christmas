@@ -19935,6 +19935,7 @@ body {
   background: url(../images/digital-christmas-tree.jpg);
   -webkit-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media -sass-debug-info {
@@ -19943,7 +19944,7 @@ body {
   }
 
   line {
-    font-family: \0000320;
+    font-family: \0000321;
   }
 }
 
@@ -19964,7 +19965,7 @@ h6 {
   }
 
   line {
-    font-family: \0000327;
+    font-family: \0000328;
   }
 }
 
@@ -19981,7 +19982,7 @@ h6 {
   }
 
   line {
-    font-family: \0000332;
+    font-family: \0000333;
   }
 }
 
@@ -20000,7 +20001,7 @@ h6 {
   }
 
   line {
-    font-family: \0000340;
+    font-family: \0000341;
   }
 }
 
@@ -20017,7 +20018,7 @@ h6 {
   }
 
   line {
-    font-family: \0000347;
+    font-family: \0000348;
   }
 }
 
@@ -20034,7 +20035,7 @@ h6 {
   }
 
   line {
-    font-family: \0000353;
+    font-family: \0000354;
   }
 }
 
@@ -20049,7 +20050,7 @@ h6 {
   }
 
   line {
-    font-family: \0000358;
+    font-family: \0000359;
   }
 }
 
@@ -20065,7 +20066,7 @@ h6 {
   }
 
   line {
-    font-family: \0000363;
+    font-family: \0000364;
   }
 }
 
@@ -20080,7 +20081,7 @@ h6 {
   }
 
   line {
-    font-family: \0000368;
+    font-family: \0000369;
   }
 }
 
@@ -20095,7 +20096,7 @@ h6 {
   }
 
   line {
-    font-family: \0000373;
+    font-family: \0000374;
   }
 }
 
@@ -20110,13 +20111,163 @@ h6 {
   }
 
   line {
-    font-family: \0000378;
+    font-family: \0000379;
   }
 }
 
-.calendaritem > h1 {
+.calendaritem h1 {
   font-size: 50px;
   text-align: center;
+}
+
+/***
+CARDS!
+****/
+
+/* entire container, keeps perspective */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000389;
+  }
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000393;
+  }
+}
+
+.flip-container.flipped .flipper {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000398;
+  }
+}
+
+.flipped {
+  -webkit-transition: all 2.9s;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003108;
+  }
+}
+
+.flip-container,
+.front,
+.back {
+  width: 115px;
+  height: 107px;
+  transition: 2.9s;
+  -webkit-transition: all 2.9s;
+}
+
+/* flip speed goes here */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003117;
+  }
+}
+
+.flipper {
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003125;
+  }
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003134;
+  }
+}
+
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Almaas\/almaas\/christmas\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003139;
+  }
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* Responsive: Portrait tablets and up */
@@ -20128,7 +20279,7 @@ h6 {
     }
 
     line {
-      font-family: \0000385;
+      font-family: \00003147;
     }
 }
 
@@ -20144,7 +20295,7 @@ h6 {
     }
 
     line {
-      font-family: \0000392;
+      font-family: \00003154;
     }
 }
 
@@ -20163,7 +20314,7 @@ h6 {
     }
 
     line {
-      font-family: \0000397;
+      font-family: \00003159;
     }
 }
 
@@ -20179,7 +20330,7 @@ h6 {
     }
 
     line {
-      font-family: \00003101;
+      font-family: \00003163;
     }
 }
 

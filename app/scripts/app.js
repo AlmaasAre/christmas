@@ -14,6 +14,10 @@ angular.module('christmasApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'AdminCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
