@@ -81,6 +81,28 @@ h1, h2, h3, h4, h5, h6{
   text-align:center;
 }
 
+#punch, #fail{
+  visibility: hidden;
+}
+
+.showpresent{
+  height: auto;
+  max-width: 100%;
+}
+
+.loadingscreen{
+  transition: all ease 3s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 90000;
+  background-color: rgb(240, 55, 55);
+}
+
+.loadingstop{
+  visibility: hidden;
+  opacity:0;
+}
 
 /***
 CARDS!

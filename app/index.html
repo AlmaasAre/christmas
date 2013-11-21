@@ -11,9 +11,13 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" type="text/css" href="assets/modal/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="assets/modal/css/component.css" />
+    <script src="assets/modal/js/modernizr.custom.js"></script>
 </head>
   <body ng-app="christmasApp">
     <!--[if lt IE 7]>
@@ -25,8 +29,21 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <div class="loadingscreen" ng-class="{'loadingstop':loadsanta}"></div>
+
+    <div class="header">
+        <!--<ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>-->
+        <h1 class="text-muted"><span class="hearts">♥♥</span> Snart er det JUL! :D <span class="hearts">♥♥</span></h1>
+    </div>
+
     <!-- Add your site or application content here -->
     <div ng-view=""></div>
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -38,9 +55,12 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+        <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+
+
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/sass-bootstrap/js/affix.js"></script>
@@ -69,9 +89,24 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/load.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/admin.js"></script>
         <script src="scripts/services/auth.js"></script>
         <!-- endbuild -->
+
+    <!-- classie.js by @desandro: https://github.com/desandro/classie -->
+    <script src="assets/modal/js/classie.js"></script>
+    <script src="assets/modal/js/modalEffects.js"></script>
+
+    <!-- for the blur effect -->
+    <!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+    <script>
+        // this is important for IEs
+        var polyfilter_scriptpath = '/assets/modal/js/';
+    </script>
+    <script src="assets/modal/js/cssParser.js"></script>
+    <script src="assets/modal/js/css-filters-polyfill.js"></script>
+
 </body>
 </html>

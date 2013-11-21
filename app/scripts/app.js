@@ -8,7 +8,7 @@ angular.module('christmasApp', [
   'firebase',
   'ngAnimate'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $provide) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -21,4 +21,12 @@ angular.module('christmasApp', [
       .otherwise({
         redirectTo: '/'
       });
+
+      $provide.value('filepicker', filepicker);
+      filepicker.setKey('Super_Awesome_Key');
+
   });
+
+angular.module('christmasApp').run(function () {
+    filepicker.setKey('A24r63xRRxKoCJfFyMrJwz');
+});

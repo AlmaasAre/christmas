@@ -1,15 +1,7 @@
-<div class="header">
-	<!--<ul class="nav nav-pills pull-right">
-		<li class="active"><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Contact</a></li>
-	</ul>-->
-	<h1 class="text-muted"><span class="hearts">♥♥</span> Snart er det JUL! :D <span class="hearts">♥♥</span></h1>
-</div>
 
 <div class="container">
     <div ng-repeat="item in calendar" >
-        <div class="col-sm-3 flip-container well calendaritem" ng-click="flipCalendar(item.day)" ng-class="{'flipped':item.flipped}">
+        <div class="col-sm-3 flip-container well calendaritem" ng-click="flipCalendar(item.day, item.imgUrl)" ng-class="{'flipped':item.flipped}">
             <div class="flipper" >
                 <div class="front">
                     <h1>{{item.day}}</h1>
@@ -19,5 +11,32 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
+<button id="punch" class="md-trigger" data-modal="modal-1"></button>
+<button id="fail" class="md-trigger" data-modal="modal-5">Fall</button>
+
+
+<div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-content">
+        <h3>Gaven den {{selectedItem.day}}. desember er gjemt her:</h3>
+        <div>
+            <img ng-src="{{selectedItem.imgUrl}}" class="showpresent"/>
+            <button class="md-close">Ta med tilbake!</button>
+        </div>
+    </div>
+</div>
+
+<div class="md-modal md-effect-5" id="modal-5">
+    <div class="md-content">
+        <h3>Ooooda? Ikke lov til å smygkike!</h3>
+        <div>
+            <p>Dette har vi snakke tom vettu Odis :)</p>
+            <button class="md-close">Close me!</button>
+        </div>
+    </div>
+</div>
+
+<div class="md-overlay"></div>
