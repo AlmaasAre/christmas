@@ -3,11 +3,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700);
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+html {
+  height: 100%;
+  width: 100%;
 }
 
 /* Space out content a bit */
@@ -16,7 +14,9 @@ body {
     padding-bottom: 20px;
     background: url(../images/digital-christmas-tree.jpg);
     background-size:cover;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 748px;
 }
 h1, h2, h3, h4, h5, h6{
   font-family: 'Mountains of Christmas', cursive;
@@ -74,6 +74,8 @@ h1, h2, h3, h4, h5, h6{
 .calendaritem{
   margin: 5px;
   width: 23% !important;
+  border:0 !important;
+  background-color: rgba(240, 55, 55, 0);
 }
 
 .calendaritem  h1{
@@ -91,7 +93,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .loadingscreen{
-  transition: all ease 3s;
+  transition: all ease 0.8s;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -102,6 +104,15 @@ h1, h2, h3, h4, h5, h6{
 .loadingstop{
   visibility: hidden;
   opacity:0;
+}
+
+
+input.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+
+input.ng-valid.ng-dirty {
+  background-color: #78FA89;
 }
 
 /***
@@ -118,10 +129,10 @@ CARDS!
 }
 
 .flip-container, .front, .back {
-  width: 115px;
+  width: 130px;
   height: 107px;
-  transition: 2.9s;
-  -webkit-transition: all 2.9s;
+  transition: 0.5s;
+  -webkit-transition: all 0.5s;
 
 }
 
@@ -129,14 +140,13 @@ CARDS!
 .flipper {
   transition: 0.9s;
   transform-style: preserve-3d;
-
   position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
   backface-visibility: hidden;
-
+  background-color:#f5f5f5;
   position: absolute;
   top: 0;
   left: 0;
@@ -150,6 +160,7 @@ CARDS!
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
+  padding: 5px;
 }
 
 
@@ -160,19 +171,36 @@ CARDS!
         max-width: 730px;
     }
 
-    /* Remove the padding we set earlier */
+    // Remove the padding we set earlier
     .header,
     .marketing,
     .footer {
         padding-left: 0;
         padding-right: 0;
     }
-    /* Space out the masthead */
+   //  Space out the masthead
     .header {
         margin-bottom: 30px;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
+     //Remove the bottom border on the jumbotron for visual effect
     .jumbotron {
         border-bottom: 0;
     }
+
+/*    .calendaritem{
+      width:23% !important;
+    }*/
+}
+
+@media screen and (max-width: 450px) {
+
+  .back{
+    font-size: 200% !important;
+  }
+/*  .calendaritem{
+    width:40% !important;
+  }
+  h1 {
+    font-size: 23px;
+  }*/
 }

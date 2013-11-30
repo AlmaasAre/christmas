@@ -1,0 +1,21 @@
+{
+  "name": "firebase",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Zou <hello@ericzou.com>"
+  ],
+  "description": "firebase bower package",
+  "main": "firebase.js",
+  "keywords": [
+    "firebase"
+  ],
+  "license": "MIT",
+  "homepage": "www.firebase.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

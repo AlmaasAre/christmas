@@ -1,0 +1,40 @@
+<div class="container">
+    <div ng-repeat="item in calendar track by $index">
+        <div class="col-xs-3 flip-container calendaritem" ng-click="flipCalendar(item.day, item.imgUrl)" ng-class="{'flipped':item.flipped}">
+            <div class="flipper">
+                <div class="front">
+                    <h1>{{item.day}}</h1>
+                </div>
+                <div class="back">
+                    {{item.poem}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<button id="punch" class="md-trigger" data-modal="modal-1"></button>
+<button id="fail" class="md-trigger" data-modal="modal-5">Fall</button>
+
+
+<div class="md-modal md-effect-16" id="modal-1">
+    <div class="md-content">
+        <h3>Gaven den {{selectedItem.day}}. desember er gjemt her:</h3>
+        <div>
+            <img ng-hide="!selectedItem.imgUrl" ng-src="{{selectedItem.imgUrl}}" class="showpresent">
+            <h4 ng-hide="selectedItem.imgUrl">Ops. Det er nok ikke noe bilde her enda:)</h4>
+        </div>
+    </div>
+</div>
+
+<div class="md-modal md-effect-5" id="modal-5">
+    <div class="md-content">
+        <h3>Ooooda? Ikke lov til å smygkike!</h3>
+        <div>
+            <p>Dette har vi snakket om vettu Oder :) Man kan ikke åpne luken før dagen har kommet.</p>
+        </div>
+    </div>
+</div>
+
+<div class="md-overlay"></div>

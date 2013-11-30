@@ -1,13 +1,13 @@
 
 <div class="container">
-    <div ng-repeat="item in calendar" >
-        <div class="col-sm-3 flip-container well calendaritem" ng-click="flipCalendar(item.day, item.imgUrl)" ng-class="{'flipped':item.flipped}">
+    <div ng-repeat="item in calendar track by $index" >
+        <div class="col-xs-3 flip-container calendaritem" ng-click="flipCalendar(item.day, item.imgUrl)" ng-class="{'flipped':item.flipped}">
             <div class="flipper" >
                 <div class="front">
                     <h1>{{item.day}}</h1>
                 </div>
                 <div class="back">
-                    This is the back
+                    {{item.poem}}
                 </div>
             </div>
         </div>
@@ -19,12 +19,12 @@
 <button id="fail" class="md-trigger" data-modal="modal-5">Fall</button>
 
 
-<div class="md-modal md-effect-1" id="modal-1">
+<div class="md-modal md-effect-16" id="modal-1">
     <div class="md-content">
         <h3>Gaven den {{selectedItem.day}}. desember er gjemt her:</h3>
         <div>
-            <img ng-src="{{selectedItem.imgUrl}}" class="showpresent"/>
-            <button class="md-close">Ta med tilbake!</button>
+            <img ng-hide="!selectedItem.imgUrl" ng-src="{{selectedItem.imgUrl}}" class="showpresent"/>
+            <h4 ng-hide="selectedItem.imgUrl">Ops. Det er nok ikke noe bilde her enda:)</h4>
         </div>
     </div>
 </div>
@@ -33,8 +33,7 @@
     <div class="md-content">
         <h3>Ooooda? Ikke lov til å smygkike!</h3>
         <div>
-            <p>Dette har vi snakke tom vettu Odis :)</p>
-            <button class="md-close">Close me!</button>
+            <p>Dette har vi snakket om vettu Oder :) Man kan ikke åpne luken før dagen har kommet.</p>
         </div>
     </div>
 </div>

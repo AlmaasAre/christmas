@@ -1,0 +1,20 @@
+<div ng-if="!isLoggedIn" class="jumbotron">
+    <h2>SO U THINK U CAN DANCE?</h2>
+
+    <form novalidate="">
+        <input name="uName" type="text" ng-model="username" placeholder="Your horses' NAME" required="">
+        <input name="pWord" type="password" ng-model="password" placeholder="***PASSWORD" required="">
+        <button ng-click="login(username, password)">DIE PLZ</button>
+    </form>
+</div>
+
+
+<div class="jumbotron" ng-if="isLoggedIn">
+    <h2>HEI ADMIN! Du har SNEKET DEg iNN JA?</h2>
+    <div class="container">
+        <button ng-if="day&&poem" ng-click="pickFile(day, poem)">TA ET BILDE DAA!</button>
+        <input type="number" ng-model="day" required="">
+        <input type="text" ng-model="poem" required="">
+    </div>
+</div>
+<img ng-if="imageUrl" ng-src="{{imageUrl}}">

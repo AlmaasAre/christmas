@@ -23,10 +23,10 @@ angular.module('christmasApp', [
       });
 
       $provide.value('filepicker', filepicker);
-      filepicker.setKey('Super_Awesome_Key');
+      filepicker.setKey('A24r63xRRxKoCJfFyMrJwz');
 
-  });
+
+    });
 
 angular.module('christmasApp').run(function () {
-    filepicker.setKey('A24r63xRRxKoCJfFyMrJwz');
 });

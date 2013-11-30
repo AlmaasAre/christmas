@@ -10,10 +10,9 @@ angular.module('christmasApp')
 
         var _isLoggedIn = function () {
 
-                return _model.isLoggedIn;;
+                return _model.isLoggedIn;
             },
             _login = function (username, password) {
-
                 if(username == 'mralmaas@gmail.com' && password == 'eplemoshansen')
                 {
                     _model.isLoggedIn = true;
