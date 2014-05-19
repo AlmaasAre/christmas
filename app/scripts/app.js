@@ -23,7 +23,7 @@ angular.module('christmasApp', [
       });
 
       $provide.value('filepicker', filepicker);
-      filepicker.setKey('A24r63xRRxKoCJfFyMrJwz');
+      filepicker.setKey('fapdydoo');
 
 
     });
